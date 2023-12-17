@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <style>
+        /* Your existing styles here */
+    </style>
+    <title>Image Format Converter</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+        <a class="navbar-brand" href="#">ezConverter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>       
+    </nav>
+    <div class="container mt-5 pt-5">
+        <h1 class="text-center mb-4">Image Converter</h1>
+        <form id="image-form" class="my-4">
+            <div class="input-group mb-3">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="image-input" accept="image/*" required>
+                    <label class="custom-file-label" for="image-input">Choose image</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="format-select" class="form-label">Select Output Format</label>
+                <select id="format-select" class="form-control">
+                    <option value="jpeg">JPEG</option>
+                    <option value="jpg">JPG</option>
+                    <option value="png">PNG</option>
+                    <option value="gif">GIF</option>
+                    <option value="bmp">BMP</option>
+                    <option value="webp">WEBP</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Convert Image</button>
+        </form>
+        <div id="conversion-message" class="alert" style="display: none;"></div>
+        <div id="preview-container" class="text-center">
+            <div id="button-container">
+                <button id="preview-button" class="btn btn-info mt-3" style="display: none;">Preview</button>
+                <a id="download-link" class="btn btn-success mt-3 mb" style="display: none;">Download</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+	
+</script>
+</body>
+</html>
